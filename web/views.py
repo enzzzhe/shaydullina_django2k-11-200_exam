@@ -17,3 +17,10 @@ def index(request):
 
     return render(request, 'index.html', {'form': form})
 
+def answer(request, question_id):
+    try:
+        question = Question.objects.get(id=question_id)
+    except Question.DoesNotExist:
+        return HttpResponseNotFound("Вопрос не найден")
+        
+    return render(request, 'answer.html', {'question': question})
