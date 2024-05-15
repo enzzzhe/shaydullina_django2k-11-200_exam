@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ответ</title>
+</head>
+
+<body>
+    <h1>{{ question.text }}</h1>
+    <p>Ответ: {{ question.answer }}</p>
+    <p>
+        <a href="{% url 'answer:answer' question.id %}">Ссылка на этот ответ</a>
+    </p>
+</body>
+
+</html>

@@ -1,9 +1,8 @@
 from django.db import models
 
-# Create your models here.
-
 class Question(models.Model):
-    name = models.CharField(max_length=30)
+    text = models.CharField(max_length=255)
+    answer = models.CharField(max_length=3)
 
     def __str__(self):
-        return self.name
+        return self.text
