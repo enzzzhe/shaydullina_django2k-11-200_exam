@@ -11,7 +11,7 @@ def index(request):
             question = form.save(commit=False)
             question.answer = random.choice(['ДА', 'НЕТ'])
             question.save()
-            return redirect('answer:answer', question_id=question.id)
+            return redirect('web:answer', question_id=question.id)
     else:
         form = QuestionForm()
 
